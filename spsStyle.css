@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #011936;
+    background-color: #011936;
+    opacity: 1;
+    background-image:  radial-gradient(#ffffff 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#ffffff 0.8500000000000001px, #011936 0.8500000000000001px);
+    background-size: 34px 34px;
+    background-position: 0 0,17px 17px;
+}
+button {
+    background-color: #011936;
+    color: #ffffff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px !important;
+    box-shadow: 1px 1px 5px #525252, -1px -1px 5px #ffffff;
+}
+input {
+    margin-top: 0px;
+    padding: 0px 10px;
+    transition: 0.2s ease;
+    border: none;
+    border-bottom: 1px solid;
+}
+img {
+    height: inherit;
+}
+#getReadyHand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+}
+#setPlayerCnt{
+    height: fit-content;
+    width: 350px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cntHolder{
+    display: flex;
+    gap: 20px;
+}
+.cntHolder > span > i {
+    font-size: xx-large;
+}
+#setPlayer{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+#getPlayerDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.infoPlayer {
+    margin-top: 20px;
+    border: black 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+    opacity: 0.8;
+} 
+.infoPlayer > ul {
+    margin: 0px;
+    padding-left: 20px;
+}
+#spsGamePlay {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.showHand {
+    height: 450px;
+    width: 450px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.option {
+    height: 80px;
+    width: 500px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    align-items: center;
+    gap: 10px;
+}
+.scoreDis {
+    height: 70px;
+    width: 500px;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.scoreDis > div {
+    height: inherit;
+    width: 100px;
+    color: #011936;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 1px #525252, inset 0px 0px 20px 1px #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scoreDis > div > p {
+    width: 100%;
+    margin: 0px;
+    background-color: #011936;
+    color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.scoreDis > div > b {
+    font-size: x-large;
+}
+.op {
+    height: 60px;
+    width: 100%;
+    padding-right: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.op > button {
+    width: 100%;
+    margin-left: 10px;
+    font-size: xx-large;
+}
