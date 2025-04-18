@@ -17,6 +17,29 @@ function creatHand() {
         handImg.src = "./stone.png";
         handImg.alt = "hand";
         handImg.dataset.id = "2";
+        if (playerCount == 2) {
+            if (i == 2) {
+                handImg.style.transform = 'rotate(270deg)';
+            } else {
+                handImg.style.transform = 'rotate(90deg)';
+            }
+        } else if (playerCount == 3) {
+            if (i == 1) {
+                handImg.style.transform = 'rotate(150deg)';
+            } else if (i == 2) {
+                handImg.style.transform = 'rotate(210deg)';
+            }
+        } else if (playerCount == 4) {
+            if (i == 1) {
+                handImg.style.transform = 'rotate(150deg)';
+            } else if (i == 2) {
+                handImg.style.transform = 'rotate(210deg)';
+            } else if (i == 3) {
+                handImg.style.transform = 'rotate(30deg)';
+            } else if (i == 4) {
+                handImg.style.transform = 'rotate(330deg)';
+            }
+        }
         hand.appendChild(handImg);
         handHOl.appendChild(hand);
         //create player score
@@ -84,13 +107,26 @@ function assignPlayer() {
 }
 
 function shakeHand() {
+    let playButton = document.getElementById("playBtn");
+    if (!playButton.disabled) {
+        playButton.disabled = true;
+        setTimeout(() => {playButton.disabled = false;}, 3000);
+    }
     for (i = 1; i <= playerCount; i++) {
         let randomValue = Math.floor(Math.random() * 3) + 1;
         let playerHand = document.getElementById(`${i}`);
-        playerHand.src = `./${handPossiable[randomValue]}.png`
-        playerHand.dataset.handposs = handPossiable[randomValue];
+        playerHand.classList.remove('shackAni');
+        void playerHand.offsetWidth;
+        playerHand.classList.add('shackAni');
+        playerHand.src = `./${handPossiable[1]}.png`;
+        setTimeout(() => {
+            playerHand.src = `./${handPossiable[randomValue]}.png`;
+            playerHand.dataset.handposs = handPossiable[randomValue];
+        }, 2000);
     }
-    scoreAssign();
+    setTimeout(() => {
+        scoreAssign();
+    }, 2500);
 }
 
 function scoreAssign() {
